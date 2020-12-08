@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'alo';
+
+  login(){
+    window.location.href = 'api/v1/auth/discord';
+  }
 }
