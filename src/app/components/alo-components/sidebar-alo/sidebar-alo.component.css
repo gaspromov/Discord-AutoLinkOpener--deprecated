@@ -1,0 +1,40 @@
+.sidebar{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 40px;
+
+    padding: 40px 20px 10px;
+    background-color: #333333;
+
+    font-weight: 500;
+    border-radius: 20px 0px 0px 20px;
+}
+
+
+
+.sidebar > :last-child{
+    align-self: end;
+    font-size: 14px;
+}
+
+.logo{
+    justify-self: center;
+    height: 46px;
+}
+
+.menu{
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    row-gap: 20px;
+    align-items: start;
+    font-size: 18px;
+}
+
+ul{
+    display: grid;
+    row-gap: 10px;
+}
+
+ul li{
+    cursor: pointer;
+}

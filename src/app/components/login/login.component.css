@@ -1,0 +1,43 @@
+.login{
+    align-self: center;
+    justify-self: center;
+
+    background-color: #222222;
+    border-radius: 20px;
+    padding: 40px 75px;
+
+    display: grid;
+    row-gap: 40px;
+}
+
+.logo{
+    height: 88px;
+    justify-self: center;
+    transition: .3s;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px 0px;
+    border-radius: 8px;
+    background-color: #00AE98;
+
+    width: 250px;
+
+    color: #222222;
+    font-size: 18px;
+    font-weight: 500;
+
+    transition: .4s;
+}
+
+button:hover{
+    background-color: #90DAD0;
+}

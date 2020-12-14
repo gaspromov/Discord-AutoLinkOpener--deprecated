@@ -1,0 +1,37 @@
+.mini-window{
+    align-self: center;
+    justify-self: center;
+
+    display: grid;
+    row-gap: 40px;
+    padding: 40px 0px;
+
+    justify-items: center;
+    
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+
+    background-color: #222222;
+
+    width: 400px;
+    border-radius: 20px;
+}
+
+p{
+    text-align: center;
+}
+
+.social{
+    display: grid;
+    row-gap: 15px;
+    column-gap: 40px;
+
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.social>:first-child{
+    grid-column: 1/3;
+}
