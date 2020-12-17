@@ -1,3 +1,18 @@
 <div class="window">
     
+    <div class="discord-info">
+        <span class="avatar"></span>
+        <span class="nickname">Nickname#0001</span>
+    </div>
+
+    <div class="input-block">
+        <span class="inputName">License key</span>
+        <input type="text" [(ngModel)]="licenseKey" class="standart-input" 
+            name="license" id="license" placeholder="License key" 
+            mask="AAAA-AAAA-AAAA-AAAA" [dropSpecialCharacters]="false"
+        >
+        <button class="standart-input" (click)="getInfo()">Info</button>
+        <button class="standart-input">Reset</button>
+    </div>
+
 </div>

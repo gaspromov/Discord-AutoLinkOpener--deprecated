@@ -1,3 +1,91 @@
-<div class="window">
+<form [formGroup]="supremeForm" (ngSubmit)="onStart()" class="window">
     
-</div>
+    
+    <div class="input-block">
+        <span class="inputName">Positive keywords</span>
+        
+        <div class="standart-input">
+            <div class="value" *ngFor="let kw of supremeForm.value.ps_kw">
+                {{ kw }}
+                <img src="/assets/img/icons/cross.svg" class="pointer" (click)="deleteKW(kw, true)">
+            </div>
+        </div>
+
+        <button type="button" class="standart-input" (click)="onOpenPopup('Positive kw', 'box, logo', false, true)">
+            <img src="/assets/img/icons/plus.svg" alt="add">
+        </button>
+    </div>
+
+    <div class="input-block">
+        <span class="inputName">Negative keywords</span>
+
+        <div class="standart-input">
+            <div class="value" *ngFor="let kw of supremeForm.value.ng_kw">
+                {{ kw }}
+                <img src="/assets/img/icons/cross.svg" class="pointer" (click)="deleteKW(kw, false)">
+            </div>
+        </div>
+
+        <button type="button" class="standart-input" (click)="onOpenPopup('Negative kw', 'fake, false', false, false)">
+            <img src="/assets/img/icons/plus.svg" alt="add">
+        </button>
+    </div>
+
+    <div class="params">
+
+        <div class="">
+            <span class="inputName" >Category</span>
+            <select class="standart-input" formControlName="category">
+                <option value="all">All</option>
+                <option value="new" selected>New</option>
+                <option value="jackets">Jackets</option>
+                <option value="shirts">Shirts</option>
+                <option value="top/sweaters">Top/sweaters</option>
+                <option value="sweartshirts">Sweartshirts</option>
+                <option value="pants">Pants</option>
+                <option value="hats">Hats</option>
+                <option value="bags">Bags</option>
+                <option value="accessories">Accessories</option>
+                <option value="skate">Skate</option>
+            </select>
+        </div>
+
+        <div class="">
+            <span class="inputName">Color</span>
+            <input type="text" placeholder="black" class="standart-input" formControlName="color">
+        </div>
+
+        <div class="">
+            <span class="inputName">Size</span>
+            <select class="standart-input" formControlName="size">
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
+        </div>
+
+    </div>
+    
+    <div class="">
+        <span class="inputName">Delay (ms)</span>
+        <input type="text" class="standart-input" formControlName="delay">
+    </div>
+
+    <div class="btns-block">
+        <button class="standart-input" type="button">Logs</button>
+        <button class="standart-btn" type="submit">Start</button>
+    </div>
+
+
+</form>
+
+
+<app-popup-alo
+    *ngIf="isActivePopup"
+    [canBeAll]='canBeAllPopup' [title]="titlePopup" [placeholder]="placeholderPopup"
+    (onClosePopup)="onClosePopup()" (onSave)="onSave($event)"
+ >
+</app-popup-alo>
+
+<app-supreme-logs></app-supreme-logs>

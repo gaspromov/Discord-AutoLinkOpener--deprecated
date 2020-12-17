@@ -21,6 +21,8 @@ import { HomeAloComponent } from './components/alo-components/home-alo/home-alo.
 import { SettingsAloComponent } from './components/alo-components/settings-alo/settings-alo.component';
 import { DsOpenerComponent } from './components/alo-components/ds-opener/ds-opener.component';
 import { SidebarAloComponent } from './components/alo-components/sidebar-alo/sidebar-alo.component';
+import { PopupAloComponent } from './components/alo-components/popup-alo/popup-alo.component';
+import { SupremeLogsComponent } from './components/alo-components/supreme-logs/supreme-logs.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { SidebarAloComponent } from './components/alo-components/sidebar-alo/sid
     HomeAloComponent,
     SettingsAloComponent,
     DsOpenerComponent,
-    SidebarAloComponent
+    SidebarAloComponent,
+    PopupAloComponent,
+    SupremeLogsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+<form class="popup" (ngSubmit)="onSubmit()">
+    <h3 class="title">{{ title }}</h3>
+    <input type="text" class="standart-input" [placeholder]="placeholder" [(ngModel)]="inputValue" [ngModelOptions]="{standalone: true}">
+    <div class="all" *ngIf="canBeAll">
+        Monitor all servers: <button class="standart-btn">On</button>
+    </div>
+    <button class="standart-btn">{{ btnText }}</button>
+</form>
+
+<div class="artboard" (click)="onClosePopup.emit()"></div>

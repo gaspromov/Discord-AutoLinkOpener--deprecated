@@ -1,0 +1,10 @@
+.window{
+    grid-template-rows: repeat(4, auto) 1fr;
+}
+
+.params{
+    display: grid;
+    grid-template-columns: 150px 130px 100px;
+    column-gap: 20px;
+
+}

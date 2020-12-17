@@ -21,23 +21,6 @@
 }
 
 button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 5px 0px;
-    border-radius: 8px;
-    background-color: #00AE98;
-
     width: 250px;
-
-    color: #222222;
     font-size: 18px;
-    font-weight: 500;
-
-    transition: .4s;
-}
-
-button:hover{
-    background-color: #90DAD0;
 }

@@ -1,3 +1,52 @@
-<div class="window">
+<form (ngSubmit)="console()" class="window">
+
+    <div class="input-block">
+        <span class="inputName">Account token</span>
+        <div class="standart-input"></div>
+        <button type="button" class="standart-input" (click)="onOpenPopup('Account token', 'Token', false)">
+            <img src="/assets/img/icons/plus.svg" alt="add">
+        </button>
+    </div>
+
+    <div class="input-block">
+        <span class="inputName">Channels</span>
+        <div class="standart-input"></div>
+        <button type="button" class="standart-input" (click)="onOpenPopup('Channels', 'Separate with commas', true)">
+            <img src="/assets/img/icons/plus.svg" alt="add">
+        </button>
+    </div>
+
+    <div class="input-block">
+        <span class="inputName">Positive keywords</span>
+        <div class="standart-input"></div>
+        <button type="button" class="standart-input" (click)="onOpenPopup('Positive kw', 'cybersole, soleterminator', false)">
+            <img src="/assets/img/icons/plus.svg" alt="add">
+        </button>
+    </div>
+
+    <div class="input-block">
+        <span class="inputName">Negative keywords</span>
+        <div class="standart-input"></div>
+        <button type="button" class="standart-input" (click)="onOpenPopup('Negative kw', 'twitter, fake', false)">
+            <img src="/assets/img/icons/plus.svg" alt="add">
+        </button>
+    </div>
     
-</div>
+    <div class="">
+        <span class="inputName">Delay (ms)</span>
+        <input type="text" class="standart-input">
+    </div>
+
+    <div class="btns-block">
+        <button class="standart-btn">Start</button>
+    </div>
+
+</form>
+
+<app-popup-alo
+    *ngIf="isActivePopup"
+    [canBeAll]='canBeAllPopup' [title]="titlePopup" [placeholder]="placeholderPopup"
+    (onClosePopup)="onClosePopup()"
+ >
+</app-popup-alo>
+

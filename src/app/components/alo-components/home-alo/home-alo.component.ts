@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-alo.component.css']
 })
 export class HomeAloComponent implements OnInit {
+  licenseKey: string = '';
 
-  constructor() { }
+  constructor(){}
 
   ngOnInit(): void {
   }
+
+  getInfo(){
+    console.log(this.licenseKey);
+  }
+
+  resetKey(){
+
+  }
+
 
 }

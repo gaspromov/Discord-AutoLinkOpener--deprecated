@@ -1,3 +1,44 @@
 <div class="window">
+
+    <div class="input-block">
+        <span class="inputName">Monitoring account token</span>
+        <div class="standart-input"></div>
+        <button type="button" class="standart-input" (click)="onOpenPopup('Monitoring account', 'Token', false)">
+            <img src="/assets/img/icons/plus.svg" alt="add">
+        </button>
+    </div>
+
+    <div class="input-block">
+        <span class="inputName">Target account token</span>
+        <div class="standart-input"></div>
+        <button type="button" class="standart-input" (click)="onOpenPopup('Target account', 'Token', false)">
+            <img src="/assets/img/icons/plus.svg" alt="add">
+        </button>
+    </div>
     
+    <div class="input-block">
+        <span class="inputName">Channels</span>
+        <div class="standart-input"></div>
+        <button type="button" class="standart-input" (click)="onOpenPopup('Channels', 'Separate with commas', true)">
+            <img src="/assets/img/icons/plus.svg" alt="add">
+        </button>
+    </div>
+    
+    <div class="">
+        <span class="inputName">Delay (ms)</span>
+        <input type="text" class="standart-input">
+    </div>
+
+    <div class="btns-block">
+        <button class="standart-btn">Start</button>
+    </div>
+
 </div>
+
+
+<app-popup-alo
+    *ngIf="isActivePopup"
+    [canBeAll]='canBeAllPopup' [title]="titlePopup" [placeholder]="placeholderPopup"
+    (onClosePopup)="onClosePopup()"
+ >
+</app-popup-alo>
